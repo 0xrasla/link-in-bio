@@ -39,8 +39,14 @@
 <main>
   <!-- BG -->
   <div class="absolute w-full h-full top-0 left-0 -z-10">
-    <video autoplay loop bind:muted class="w-full h-full object-cover">
-      <source src="/bg.mp4" type="video/mp4" />
+    <video
+      autoplay
+      loop
+      bind:muted
+      class="w-full h-full object-cover"
+      src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
+      type="video/mp4"
+    >
       <track
         kind="captions"
         src="https://storage.googleapis.com/coverr-main/vtt/Mt_Baker.vtt"
