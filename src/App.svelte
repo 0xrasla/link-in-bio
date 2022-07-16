@@ -40,10 +40,7 @@
   <!-- BG -->
   <div class="absolute w-full h-full top-0 left-0 -z-10">
     <video autoplay loop bind:muted class="w-full h-full object-cover">
-      <source
-        src="https://raw.githubusercontent.com/0xrasla/link-in-bio/master/src/assets/bg.mp4"
-        type="video/mp4"
-      />
+      <source src="" type="video/mp4" />
 
       <track
         kind="captions"
