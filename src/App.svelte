@@ -1,6 +1,5 @@
 <script>
   import "./app.css";
-  import bgVideo from "./assets/bg.mp4";
 
   let muted = false;
 
@@ -41,8 +40,11 @@
   <!-- BG -->
   <div class="absolute w-full h-full top-0 left-0 -z-10">
     <video autoplay loop bind:muted class="w-full h-full object-cover">
-      <source src={bgVideo} type="video/mp4" />
-      <!-- https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4 -->
+      <source
+        src="https://raw.githubusercontent.com/0xrasla/link-in-bio/master/src/assets/bg.mp4"
+        type="video/mp4"
+      />
+
       <track
         kind="captions"
         src="https://storage.googleapis.com/coverr-main/vtt/Mt_Baker.vtt"
