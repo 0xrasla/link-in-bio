@@ -9,5 +9,5 @@ body {
 }
 
 .card {
-  @apply bg-slate-200 text-black   md:bg-transparent font-body p-4 md:text-white rounded-full text-center cursor-pointer flex justify-center items-center gap-4 border-2 border-gray-400;
+  @apply bg-gray-700 text-white   md:bg-transparent font-body p-4 md:text-white rounded-full text-center cursor-pointer flex justify-center items-center gap-4 border-2 border-gray-400;
 }
