@@ -7,27 +7,27 @@
     {
       name: "Official Website",
       url: "https://rasso.netlify.app/",
-      icon: "https://img.icons8.com/small/16/000000/home.png",
+      icon: "https://img.icons8.com/small/16/ffffff/home.png",
     },
     {
       name: "Youtube",
       url: "https://www.youtube.com/channel/UCXFJeeYdEikfwazkrTurmgg",
-      icon: "https://img.icons8.com/small/16/000000/youtube--v1.png",
+      icon: "https://img.icons8.com/small/16/ffffff/youtube--v1.png",
     },
     {
       name: "Twitter",
       url: "https://twitter.com/julian_santos",
-      icon: "https://img.icons8.com/small/16/000000/twitter.png",
+      icon: "https://img.icons8.com/small/16/ffffff/twitter.png",
     },
     {
       name: "Github",
       url: "https://github.com/0xrasla",
-      icon: "https://img.icons8.com/small/16/000000/github.png",
+      icon: "https://img.icons8.com/small/16/ffffff/github.png",
     },
     {
       name: "Instagram",
       url: "https://www.instagram.com/rassouniqz/",
-      icon: "https://img.icons8.com/small/16/000000/instagram-new.png",
+      icon: "https://img.icons8.com/small/16/ffffff/instagram-new.png",
     },
   ];
 
@@ -44,6 +44,7 @@
       loop
       bind:muted
       class="w-full h-full object-cover"
+      poster="https://sveltejs.github.io/assets/caminandes-llamigos.jpg"
       src="https://sveltejs.github.io/assets/caminandes-llamigos.mp4"
       type="video/mp4"
     >
