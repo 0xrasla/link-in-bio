@@ -32,16 +32,20 @@ let links = [
 
 // create list of links
 (() => {
+  document.onreadystatechange = function () {
+    if (document.readyState !== "complete") {
+      document.querySelector("body").style.visibility = "hidden";
+      document.querySelector("#loader").style.visibility = "visible";
+    } else {
+      document.querySelector("#loader").style.display = "none";
+      document.querySelector("body").style.visibility = "visible";
+    }
+  };
+
   createLinks(links);
   if (mobileCheck()) {
     changeIconColors();
   }
-
-  window.addEventListener("resize", () => {
-    // if (mobileCheck()) {
-    //   changeIconColors();
-    // }
-  });
 
   // make video mute
   const video = document.querySelector("video");
