@@ -2,31 +2,33 @@ import "./style.css";
 import "./utils/utils.js";
 import { mobileCheck } from "./utils/utils.js";
 
+let color = "ffffff";
+
 let links = [
   {
     name: "Official Website",
     url: "https://rasso.netlify.app/",
-    icon: "https://img.icons8.com/small/16/000000/home.png",
+    icon: `https://img.icons8.com/small/16/${color}/home.png`,
   },
   {
     name: "Youtube",
     url: "https://www.youtube.com/channel/UCXFJeeYdEikfwazkrTurmgg",
-    icon: "https://img.icons8.com/small/16/000000/youtube--v1.png",
+    icon: `https://img.icons8.com/small/16/${color}/youtube--v1.png`,
   },
   {
-    name: "Twitter",
-    url: "https://twitter.com/julian_santos",
-    icon: "https://img.icons8.com/small/16/000000/twitter.png",
+    name: `Twitter`,
+    url: `https://twitter.com/julian_santos`,
+    icon: `https://img.icons8.com/small/16/${color}/twitter.png`,
   },
   {
-    name: "Github",
-    url: "https://github.com/0xrasla",
-    icon: "https://img.icons8.com/small/16/000000/github.png",
+    name: `Github`,
+    url: `https://github.com/0xrasla`,
+    icon: `https://img.icons8.com/small/16/${color}/github.png`,
   },
   {
-    name: "Instagram",
-    url: "https://www.instagram.com/rassouniqz/",
-    icon: "https://img.icons8.com/small/16/000000/instagram-new.png",
+    name: `Instagram`,
+    url: `https://www.instagram.com/rassouniqz/`,
+    icon: `https://img.icons8.com/small/16/${color}/instagram-new.png`,
   },
 ];
 
@@ -90,16 +92,4 @@ function createLinks(links) {
 
     el.appendChild(d);
   });
-}
-
-function changeIconColors() {
-  const icons = document.querySelectorAll(".link img");
-  Array.from(icons).forEach((icon) => {
-    if (icon.src.includes("000000")) {
-      icon.src = icon.src.replace("000000", "ffffff");
-    } else {
-      icon.src = icon.src.replace("ffffff", "000000");
-    }
-  });
-  console.log(icons);
 }
