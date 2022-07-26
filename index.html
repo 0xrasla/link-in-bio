@@ -10,12 +10,9 @@
 
 <body>
   <main class="app">
-    <div class="absolute w-full h-full top-0 left-0 -z-10">
-      <video autoplay loop class="w-full h-full object-cover"
-        src="https://link-in-bio-rasla-dev.vercel.app/assets/bg.9d954678.mp4" type="video/mp4">
-        <!-- <track kind="captions" -->
-        <!-- src="https://static.videezy.com/system/resources/previews/000/016/312/original/Trees_And_Grass_In_The_Park_0922.mp4" /> -->
-      </video>
+    <div class="absolute top-0 left-0 h-full w-full" id="particles-js"></div>
+    <div class="absolute w-full h-full top-0 left-0 -z-20">
+      <video id="vid" autoplay loop class="w-full h-full object-cover" />
     </div>
     <section class="flex flex-col justify-center items-center">
       <img class="w-48 rounded-full mt-5" src="https://avatars.githubusercontent.com/u/76244740?v=4" alt="Rasla Pic" />
@@ -24,10 +21,9 @@
       </h6>
       <div class="links flex flex-col gap-5 mt-5 w-72 h-3"></div>
     </section>
-    <div class="mute-btn fixed cursor-pointer bg-black rounded-full opacity-50 p-2">
-      <img class="bg-black" alt="Mute" />
-    </div>
   </main>
+
+  <script src="/utils/particles.js"></script>
   <script type="module" src="/main.js"></script>
 </body>
 
