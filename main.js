@@ -3,6 +3,12 @@ import { videoData } from "./utils/utils.js";
 
 let color = "ffffff";
 
+// add loader to the page untill the data is loaded
+window.addEventListener("load", () => {
+  const loader = document.querySelector(".app > .middle");
+  loader.classList.add("hidden");
+  document.querySelector("body .app").classList.remove("notloaded");
+});
 let links = [
   {
     name: "Official Website",
@@ -16,7 +22,7 @@ let links = [
   },
   {
     name: `Twitter`,
-    url: `https://twitter.com/julian_santos`,
+    url: `https://twitter.com/`,
     icon: `https://img.icons8.com/small/16/${color}/twitter.png`,
   },
   {
@@ -39,7 +45,6 @@ let links = [
   video.loop = true;
   video.muted = true;
   video.playbackRate = 1;
-  // low speed of video
 
   video.controls = false;
   video.setAttribute("playsinline", "");
