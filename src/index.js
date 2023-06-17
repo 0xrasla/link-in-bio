@@ -10,7 +10,7 @@ let links = [
   },
   {
     name: "Youtube",
-    url: "https://www.youtube.com/channel/UCXFJeeYdEikfwazkrTurmgg",
+    url: "https://www.youtube.com/channel/UC_-Sg3dW0yIathaX7-RtJMQ",
     icon: (color) => `https://img.icons8.com/small/16/${color}/youtube--v1.png`,
   },
   {
@@ -25,7 +25,7 @@ let links = [
   },
   {
     name: `Instagram`,
-    url: `https://www.instagram.com/rassouniqz/`,
+    url: `https://www.instagram.com/dev_rasla/`,
     icon: (color) =>
       `https://img.icons8.com/small/16/${color}/instagram-new.png`,
   },
@@ -85,6 +85,13 @@ function swithDarkmode() {
 }
 
 function init() {
+  window.addEventListener("load", () => {
+    loadingBar.style.width = "100%";
+    loadingBar.addEventListener("transitionend", () => {
+      loadingBar.parentElement.style.display = "none";
+    });
+  });
+
   createLinks(links);
 
   // dark mode

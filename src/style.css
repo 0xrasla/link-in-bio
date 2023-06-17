@@ -12,8 +12,13 @@ body {
     @apply flex pl-[25%] sm:pl-[30%] gap-4 border-2 border-gray-700 dark:border-gray-300 rounded-lg p-2 mb-4 text-gray-700  dark:text-white font-bold shadow-lg;
 }
 
+.loading {
+    @apply absolute overflow-hidden h-screen w-screen bg-gray-600;
+  }
+  
+
 .dark\:bg-gray-800 {
     background-color: #2d3748;
     transition: background-color 1s ease;
   }
-  
+
