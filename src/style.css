@@ -9,7 +9,7 @@ body {
 }
 
 .link {
-    @apply flex pl-[25%] sm:pl-[30%] gap-4 border-2 border-gray-700 dark:border-gray-300 rounded-lg p-2 mb-4 text-gray-700  dark:text-white font-bold shadow-lg;
+    @apply flex pl-[30%] gap-4 border-2 cursor-pointer hover:shadow-xl border-gray-700 dark:border-gray-300 rounded-lg p-2 mb-8 text-gray-700  dark:text-white font-bold shadow-lg;
 }
 
 .loading {
@@ -19,6 +19,6 @@ body {
 
 .dark\:bg-gray-800 {
     background-color: #2d3748;
-    transition: background-color 1s ease;
+    transition: background-color 5s ease;
   }
 

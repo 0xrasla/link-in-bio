@@ -6,28 +6,28 @@ let links = [
   {
     name: "Official Website",
     url: "https://rasso.netlify.app/",
-    icon: (color) => `https://img.icons8.com/small/16/${color}/home.png`,
+    icon: (color) => `https://img.icons8.com/small/24/${color}/home.png`,
   },
   {
     name: "Youtube",
     url: "https://www.youtube.com/channel/UC_-Sg3dW0yIathaX7-RtJMQ",
-    icon: (color) => `https://img.icons8.com/small/16/${color}/youtube--v1.png`,
+    icon: (color) => `https://img.icons8.com/small/24/${color}/youtube--v1.png`,
   },
   {
     name: `Twitter`,
     url: `https://twitter.com/`,
-    icon: (color) => `https://img.icons8.com/small/16/${color}/twitter.png`,
+    icon: (color) => `https://img.icons8.com/small/24/${color}/twitter.png`,
   },
   {
     name: `Github`,
     url: `https://github.com/0xrasla`,
-    icon: (color) => `https://img.icons8.com/small/16/${color}/github.png`,
+    icon: (color) => `https://img.icons8.com/small/24/${color}/github.png`,
   },
   {
     name: `Instagram`,
     url: `https://www.instagram.com/dev_rasla/`,
     icon: (color) =>
-      `https://img.icons8.com/small/16/${color}/instagram-new.png`,
+      `https://img.icons8.com/small/24/${color}/instagram-new.png`,
   },
 ];
 
@@ -42,8 +42,10 @@ function createLinks(links) {
     const a = document.createElement("a");
     const i = document.createElement("img");
 
-    a.href = link.url;
-    a.target = "_blank";
+    d.addEventListener("click", () => {
+      window.open(link.url, "_blank");
+    });
+
     a.rel = "noopener noreferrer";
     a.innerText = link.name;
 
@@ -81,17 +83,33 @@ function swithDarkmode() {
   darkmode = JSON.parse(localStorage.getItem("darkmode") || "false");
   document.documentElement.classList.toggle("dark");
   createDarkToggle();
+  fireParticles(darkmode ? "dark" : "light");
   createLinks(links);
 }
 
-function init() {
-  window.addEventListener("load", () => {
-    loadingBar.style.width = "100%";
-    loadingBar.addEventListener("transitionend", () => {
-      loadingBar.parentElement.style.display = "none";
-    });
-  });
+function loadingBar() {
+  const loadingBar = document.querySelector(".loading");
 
+  window.addEventListener("load", () => {
+    loadingBar.style.display = "none";
+    document.body.classList.remove("overflow-hidden");
+    document.body.style.overflowX = "hidden";
+  });
+}
+
+function fireParticles(mode) {
+  particlesJS.load(
+    "particles-js",
+    mode == "light" ? "light-particles.json" : "dark-particles.json",
+    function () {
+      console.log("callback - particles.js config loaded");
+    }
+  );
+}
+
+function init() {
+  loadingBar();
+  fireParticles(darkmode ? "dark" : "light");
   createLinks(links);
 
   // dark mode

@@ -6,9 +6,12 @@
     <title>Thinesh Rasla</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body class="bg-gray-300 dark:bg-black transition-all dark:transition-all">
+  <body
+    class="relative w-screen overflow-hidden bg-gray-300 dark:bg-black transition-all dark:transition-all"
+  >
+    <!-- content -->
     <div class="w-[80%] mx-auto h-screen">
-      <!-- content -->
+      <!-- nav bar -->
       <header class="p-4 flex flex-col items-center">
         <div class="nav w-full flex justify-between items-center">
           <div class="logo">
@@ -24,6 +27,7 @@
             </ul>
           </div>
         </div>
+        <!-- profile image -->
         <img
           class="rounded-full w-1/6 h-1/6 mx-auto shadow-lg"
           src="https://avatars.githubusercontent.com/u/76244740?s=400&u=4c590811b567a8a344f45611b8e5dbd0fda2b6d9&v=4"
@@ -37,6 +41,7 @@
         </h1>
       </header>
 
+      <!-- Me Section -->
       <section>
         <h2
           class="text-2xl text-center font-bold my-4 text-gray-800 dark:text-white"
@@ -65,7 +70,10 @@
         </p>
       </section>
 
-      <section class="links p-4 w-[90%] sm:w-[25%] mx-auto"></section>
+      <!-- quick links -->
+      <section
+        class="links p-4 mx-auto w-[90%] md:w-[50%] lg:w-[30%]"
+      ></section>
 
       <section class="pb-12">
         <h2
@@ -76,6 +84,20 @@
       </section>
     </div>
 
+    <!-- loading bar -->
+    <div
+      class="loading w-full absolute top-0 left-0 bg-gray-800 h-full flex justify-center items-center"
+    >
+      <h1 class="text-4xl text-white">Loading...</h1>
+    </div>
+
+    <!-- particles -->
+    <div
+      class="absolute top-0 left-0 w-full h-[150%] z-[-1]"
+      id="particles-js"
+    ></div>
+
     <script type="module" src="./src/index.js"></script>
+    <script src="/particles.js"></script>
   </body>
 </html>
